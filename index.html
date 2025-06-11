@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Monster Survivors | Rogue-Like Survival Action Game</title>
+    <meta name="description" content="Experience endless monster battles in this intense rogue-like survival game. Master strategic combat, evolve weapons, and survive escalating challenges across platforms.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://monstersurvivor.pro/">
+    
+    <!-- Open Graph & Social Media -->
+    <meta property="og:title" content="Monster Survivors | Cross-Platform Rogue-Like Game">
+    <meta property="og:description" content="Survive endless monster waves with evolving weapons and strategic upgrades. Available on web, iOS, Android, and consoles.">
+    <meta property="og:image" content="https://monstersurvivor.pro/og-image.jpg">
+    <meta property="og:url" content="https://monstersurvivor.pro/">
+    <meta property="og:type" content="game">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@MonsterSurvivors">
+    <meta name="twitter:title" content="Monster Survivors | Rogue-Like Survival Game">
+    <meta name="twitter:description" content="Master strategic combat against endless monster waves. Cross-platform progression available on web, iOS, Android, PS5, and Switch 2.">
+    <meta name="twitter:image" content="https://monstersurvivor.pro/twitter-card.jpg">
+
+    <!-- Apple Color Scheme -->
+    <meta name="theme-color" content="#1D1D1F">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="preload" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </noscript>
+
+    <!-- Critical CSS -->
+    <style>
+        /* Apple-style color palette */
+        :root {
+            --apple-black: #1D1D1F;
+            --apple-gray: #86868B;
+            --apple-light: #F5F5F7;
+            --apple-blue: #0066CC;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--apple-light);
+            color: var(--apple-black);
+            margin: 0;
+            padding: 0;
+        }
+
+        .game-iframe {
+            width: 100%;
+            height: calc(100vh - 4rem);
+            border: 1px solid #D2D2D7;
+            border-radius: 18px;
+            background: #000;
+            transition: all 0.3s ease-in-out;
+        }
+
+        @media (max-width: 768px) {
+            .game-iframe {
+                height: calc(100vh - 3.5rem);
+                border-radius: 0;
+                border-left: none;
+                border-right: none;
+            }
+        }
+
+        /* Critical Animation for Hero Section */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+    </style>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'apple-black': '#1D1D1F',
+                        'apple-gray': '#86868B',
+                        'apple-light': '#F5F5F7',
+                        'apple-blue': '#0066CC'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'sans-serif']
+                    }
+                }
+            },
+            corePlugins: {
+                preflight: false // Avoid conflict with custom styles
+            }
+        }
+    </script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Monster Survivors",
+        "alternateName": "MS: Rogue Survival",
+        "description": "Rogue-like survival action game featuring endless monster waves, weapon evolution, and strategic progression systems.",
+        "playMode": "SinglePlayer",
+        "gamePlatform": ["Web", "PlayStation 5", "Nintendo Switch 2", "iOS", "Android"],
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "Cross-Platform",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Monster Survivors Team"
+        },
+        "review": {
+            "@type": "Review",
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "4.8",
+                "bestRating": "5"
+            },
+            "author": {
+                "@type": "Person",
+                "name": "Alex Chen"
+            },
+            "datePublished": "2025-06-05",
+            "name": "Immersive Survival Experience",
+            "reviewBody": "Monster Survivors masterfully blends rogue-like elements with fast-paced combat. The weapon evolution system creates unique playstyles each session."
+        }
+    }
+    </script>
+</head>
+<body class="antialiased min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-apple-black text-apple-light p-4 shadow-md sticky top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-xl md:text-2xl font-bold tracking-tight">MonsterSurvivors.pro</a>
+            <div class="space-x-6 hidden md:flex">
+                <a href="#features" class="hover:text-apple-blue transition-colors duration-300">Features</a>
+                <a href="#gameplay" class="hover:text-apple-blue transition-colors duration-300">Gameplay</a>
+                <a href="#about" class="hover:text-apple-blue transition-colors duration-300">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-6 md:py-10">
+        <!-- Hero Section -->
+        <section class="mb-12 md:mb-16 animate-fade-in">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-apple-black leading-tight">
+                Monster Survivors
+            </h1>
+            <p class="text-xl md:text-2xl text-apple-gray mb-8 max-w-3xl">
+                Survive endless monster hordes in this intense rogue-like action game. Master strategic combat and upgrade your skills to become the ultimate survivor.
+            </p>
+            
+            <div class="bg-white rounded-2xl p-4 shadow-lg overflow-hidden">
+                <iframe 
+                    src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html" 
+                    class="game-iframe"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    title="Monster Survivors Web Version"
+                    loading="lazy"
+                >
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Game Introduction -->
+        <section class="mb-16" id="about">
+            <h2 class="text-3xl font-semibold mb-6 text-apple-black" id="about">Survival Redefined</h2>
+            <p class="text-lg text-apple-gray leading-relaxed mb-6">
+                In a post-apocalyptic world overrun by mutated creatures, <strong>Monster Survivors</strong> challenges players to survive endless waves of enemies while strategically upgrading their arsenal. This rogue-like action game combines intense combat with deep progression systems, offering a unique blend of tactical decision-making and fast-paced gameplay.
+            </p>
+            <p class="text-lg text-apple-gray leading-relaxed">
+                Featuring dynamic difficulty scaling and procedurally generated encounters, each run presents new challenges and opportunities. Master 36 unique weapon types, combine abilities, and discover powerful synergies as you fight to become the ultimate survivor.
+            </p>
+        </section>
+
+        <!-- Key Features -->
+        <section class="mb-16" id="features">
+            <h2 class="text-3xl font-semibold mb-8 text-apple-black">Core Features</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold mb-4 text-apple-black">Dynamic Combat System</h3>
+                    <p class="text-apple-gray">Experience fluid melee and ranged combat with 36 unique abilities that can be combined and evolved during gameplay. The auto-targeting system ensures smooth combat flow while maintaining strategic depth.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold mb-4 text-apple-black">Procedural Challenges</h3>
+                    <p class="text-apple-gray">Every session features randomly generated enemy waves, power-up combinations, and boss mechanics. The game's AI Director dynamically adjusts difficulty based on player performance for optimal challenge balance.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold mb-4 text-apple-black">Weapon Evolution</h3>
+                    <p class="text-apple-gray">Combine base weapons with passive items to create powerful evolved forms. Each combination unlocks unique special effects and playstyles, encouraging experimentation and strategic planning.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold mb-4 text-apple-black">Cross-Platform Progression</h3>
+                    <p class="text-apple-gray">Seamless cloud save system allows progression across PlayStation 5, Nintendo Switch 2, iOS, Android, and web platforms. Continue your survival journey anywhere, anytime.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Platform Section -->
+        <section class="mb-16" id="platforms">
+            <h2 class="text-3xl font-semibold mb-8 text-apple-black">Available On All Platforms</h2>
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <p class="text-lg text-apple-gray mb-4">
+                    Play on your preferred platform with full cross-progression support. Available on:
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mt-6">
+                    <div class="flex flex-col items-center">
+                        <img src="/icons/ps5.svg" alt="PlayStation 5" class="h-12 mb-2">
+                        <span class="text-sm text-apple-gray">PlayStation 5</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="/icons/switch.svg" alt="Nintendo Switch" class="h-12 mb-2">
+                        <span class="text-sm text-apple-gray">Switch 2</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="/icons/windows.svg" alt="Windows" class="h-12 mb-2">
+                        <span class="text-sm text-apple-gray">PC</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="/icons/android.svg" alt="Android" class="h-12 mb-2">
+                        <span class="text-sm text-apple-gray">Android</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="/icons/ios.svg" alt="iOS" class="h-12 mb-2">
+                        <span class="text-sm text-apple-gray">iOS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-apple-black text-apple-light py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-xl font-bold mb-2">Monster Survivors</h3>
+                    <p class="text-apple-gray">© 2025 Monster Survivors. All rights reserved.</p>
+                </div>
+                <div class="flex flex-col space-y-2">
+                    <a href="/privacy-policy" class="hover:text-apple-blue transition-colors">Privacy Policy</a>
+                    <a href="/terms-of-service" class="hover:text-apple-blue transition-colors">Terms of Service</a>
+                    <a href="/contact" class="hover:text-apple-blue transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
