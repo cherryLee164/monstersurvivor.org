@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Survivors | Official Survival Action Game</title>
+    <meta name="description" content="Survive endless monster hordes in this intense rogue-like action game. Master strategic combat and upgrade your skills to become the ultimate survivor.">
+    <link rel="canonical" href="https://monstersurvivors.com/">
+    
+    <!-- Apple Color Scheme -->
+    <meta name="theme-color" content="#1D1D1F">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #F5F5F7;
+            color: #1D1D1F;
+        }
+        .game-iframe {
+            height: calc(100vh - 4rem);
+            border: 1px solid #D2D2D7;
+            border-radius: 18px;
+            background: #000;
+        }
+        @media (max-width: 768px) {
+            .game-iframe {
+                border-radius: 0;
+                border-left: none;
+                border-right: none;
+            }
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'apple-black': '#1D1D1F',
+                        'apple-gray': '#86868B',
+                        'apple-light': '#F5F5F7',
+                        'apple-blue': '#0066CC'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Monster Survivors | Official Survival Action Game">
+    <meta property="og:description" content="Survive endless monster hordes in this intense rogue-like action game">
+    <meta property="og:image" content="https://monstersurvivors.com/og-image.jpg">
+</head>
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav class="bg-apple-black text-apple-light p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-xl font-bold">MonsterSurvivors.com</a>
+            <div class="space-x-6">
+                <a href="#features" class="hover:text-apple-blue transition-colors">Features</a>
+                <a href="#gameplay" class="hover:text-apple-blue transition-colors">Gameplay</a>
+                <a href="#about" class="hover:text-apple-blue transition-colors">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 text-apple-black">Monster Survivors</h1>
+        
+        <!-- Hero Section -->
+        <section class="mb-16">
+            <div class="bg-white rounded-2xl p-6 shadow-lg">
+                <iframe 
+                    src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html" 
+                    class="game-iframe w-full"
+                    allow="autoplay; fullscreen"
+                    title="Monster Survivors Web Version">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Game Introduction -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-semibold mb-6 text-apple-black" id="about">Survival Redefined</h2>
+            <p class="text-lg text-apple-gray leading-relaxed mb-6">
+                In a post-apocalyptic world overrun by mutated creatures, <strong>Monster Survivors</strong> challenges players to survive endless waves of enemies while strategically upgrading their arsenal. This rogue-like action game combines intense combat with deep progression systems, offering a unique blend of tactical decision-making and fast-paced gameplay[5][11][15].
+            </p>
+        </section>
+
+        <!-- Key Features -->
+        <section class="mb-16" id="features">
+            <h2 class="text-3xl font-semibold mb-8 text-apple-black">Core Features</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold mb-4 text-apple-black">Dynamic Combat System</h3>
+                    <p class="text-apple-gray">Experience fluid melee and ranged combat with 36 unique abilities that can be combined and evolved during gameplay. The auto-targeting system ensures smooth combat flow while maintaining strategic depth[7][19].</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold mb-4 text-apple-black">Procedural Challenges</h3>
+                    <p class="text-apple-gray">Every session features randomly generated enemy waves, power-up combinations, and boss mechanics. The game's AI Director dynamically adjusts difficulty based on player performance[3][6][20].</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Platform Section -->
+        <section class="mb-16" id="platforms">
+            <h2 class="text-3xl font-semibold mb-8 text-apple-black">Multiplatform Support</h2>
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <p class="text-lg text-apple-gray mb-4">
+                    Available on PlayStation 5, Nintendo Switch 2, and iOS/Android devices with cross-progression support. The web version offers full feature parity with native platforms[5][6][18].
+                </p>
+                <div class="grid grid-cols-3 gap-4 mt-6">
+                    <img src="ps5-badge.svg" alt="PlayStation 5" class="h-12 mx-auto">
+                    <img src="switch-badge.svg" alt="Nintendo Switch" class="h-12 mx-auto">
+                    <img src="mobile-badge.svg" alt="Mobile" class="h-12 mx-auto">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Monster Survivors",
+        "description": "Survival action game with rogue-like elements",
+        "playMode": "SinglePlayer",
+        "gamePlatform": ["Web", "PlayStation 5", "Nintendo Switch", "iOS", "Android"],
+        "applicationCategory": "Game",
+        "operatingSystem": "Cross-Platform"
+    }
+    </script>
+</body>
+</html>
